@@ -8,12 +8,12 @@
         stages {
             stage('Build') {
                 steps {
-                    sh 'python --version'
+                    sh 'npm install'
                 }
             }
             stage('Test') { 
                 steps {
-                    sh 'python python_script.py' 
+                    sh './jenkins/scripts/test.sh' 
                 }
             }
         }
